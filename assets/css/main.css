@@ -7,6 +7,10 @@ body {
   /* margin-left: 5%;
   margin-right: 5%; */
 }
+
+
+/** header section css **/
+
 h1 {
   margin: 3px;
   font-family: "Alfa Slab One", sans-serif;
@@ -25,15 +29,44 @@ h4 {
   margin: 0px;
 }
 
+
 section#header {
   text-align: center;
   margin: 0 5%;
 }
 
+
+/** feature section css **/
+
 section#features {
   text-align: center;
   margin: 0 5%;
 }
+
+div#images {
+  background-color: #eee;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+div#images div {
+  margin: 0px auto;
+  width: 30%;
+  height: 80%;
+  background-color: red;
+}
+
+button#tell-me-more {
+  margin: 20px auto;
+  padding: 5px;
+  font-size: 20px;
+  border-radius: 3px;
+}
+
+
+/**quote-space section css **/
+
 section#quote-space {
   display: flex;
   justify-content: center;
@@ -43,23 +76,154 @@ section#quote-space {
   margin: 0;
   height: 10em;
 }
-div#images {
-  background-color: #eee;
+
+/** main section css **/
+
+
+/** footer section css **/
+section#footer {
+  margin: 1em 0 0 0;
+  padding: 1em;
+  border-top: 1px solid #b3b3b3;
+  background-color: #EFEFEF;
+}
+
+h2#footer-text {
+  text-align: center;
+  margin: 5vh auto 3vh auto;
+}
+
+/** form div css **/
+div#form-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
-hr {
-  margin-top: 5px;
+
+div#form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 4fr;
+  grid-gap: 0.5em;
+  grid-template-areas:
+            "  name-input         email-input"
+            "message-textarea message-textarea";
+  margin: 1em;
+  width: 42.5vw;
 }
-div#images div {
-  margin: 0px auto;
-  width: 30%;
-  height: 80%;
-  background-color: red;
+
+#name-input {
+  grid-area: name-input;
 }
-button#tell-me-more {
-  margin: 20px auto;
-  padding: 5px;
-  font-size: 20px;
-  border-radius: 3px;
+#email-input {
+  grid-area: email-input;
+}
+#message-textarea {
+grid-area: message-textarea;
+}
+
+/** contact info div css **/
+#contact-info {
+  margin: 1em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-areas:
+            "contact-text   contact-text"
+            "contact-text   contact-text"
+            "   address     twitter-link"
+            "   address     instagram-link"
+            "phone-number   dribbble-link"
+            " email-link    facebook-link";
+  width: 42.5vw;
+}
+#contact-info li {
+  list-style-type: none;
+}
+#contact-text {
+  grid-area: contact-text;
+}
+
+#address {
+  grid-area: address;
+}
+#address:before {
+  content: '';
+  display: inline-block;
+  height: 2em;
+  width: 2em;
+  margin: 5px;
+  background-size: contain;
+  background-image: url(../images/home.svg);
+}
+#phone-number {
+  grid-area: phone-number;
+}
+#phone-number::before {
+  content: '';
+  display: inline-block;
+  height: 2em;
+  width: 2em;
+  margin: 5px;
+  background-size: contain;
+  background-image: url(../images/phone.svg);
+}
+#email-link {
+  grid-area: email-link;
+}
+#email-link::before {
+  content: '';
+  display: inline-block;
+  height: 2em;
+  width: 2em;
+  margin: 5px;
+  background-size: contain;
+  background-image: url(../images/globe.svg);
+}
+#twitter-link {
+  grid-area: twitter-link;
+}
+#twitter-link::before {
+  content: '';
+  display: inline-block;
+  height: 2em;
+  width: 2em;
+  margin: 5px;
+  background-size: contain;
+  background-image: url(../images/twitter-logo-button.svg);
+}
+#instagram-link {
+  grid-area: instagram-link;
+}
+#instagram-link::before {
+  content: '';
+  display: inline-block;
+  height: 2em;
+  width: 2em;
+  margin: 5px;
+  background-size: contain;
+  background-image: url(../images/instagram-logo.svg);
+}
+#dribbble-link {
+  grid-area: dribbble-link;
+}
+#dribbble-link::before {
+  content: '';
+  display: inline-block;
+  height: 2em;
+  width: 2em;
+  margin: 5px;
+  background-size: contain;
+  background-image: url(../images/basketball.svg);
+}
+#facebook-link {
+  grid-area: facebook-link;
+}
+#facebook-link::before {
+  content: '';
+  display: inline-block;
+  height: 2em;
+  width: 2em;
+  margin: 5px;
+  background-size: contain;
+  background-image: url(../images/facebook-logo-button.svg);
 }
