@@ -9,8 +9,18 @@ body {
 }
 h1 {
   margin: 3px;
-  font-family: 'Alfa Slab One', cursive;
+  font-family: "Alfa Slab One", sans-serif;
+  color: rgb(235,	121, 109);
 }
+
+hr {
+  border: none;
+  border-top: 3px double rgb(128, 128, 128);
+  overflow: visible;
+  text-align: center;
+  height: 5px;
+}
+
 h4 {
   margin: 0px;
 }
