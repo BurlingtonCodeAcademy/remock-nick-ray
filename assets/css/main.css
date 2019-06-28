@@ -8,10 +8,20 @@ body {
   margin-right: 5%; */
 }
 
+button {
+  margin: 20px auto;
+  padding: 5px;
+  font-size: 20px;
+  background-color: #F76B64;
+  color: white;
+  border-radius: 3px;
+  border: none;
+}
+
 
 /** header section css **/
 
-h1 {
+h1#title {
   margin: 3px;
   font-family: "Alfa Slab One", sans-serif;
   color: rgb(235,	121, 109);
@@ -57,15 +67,8 @@ div#images div {
   background-color: red;
 }
 
-button#tell-me-more {
-  margin: 20px auto;
-  padding: 5px;
-  font-size: 20px;
-  border-radius: 3px;
-}
 
-
-/**quote-space section css **/
+/** quote-space section css **/
 
 section#quote-space {
   display: flex;
@@ -77,10 +80,25 @@ section#quote-space {
   height: 10em;
 }
 
+
 /** main section css **/
+
+section#main {
+  margin: 3vh 5%;
+  background-color: aliceblue;
+  display: flex;
+}
+
+#main-content {
+  flex-basis: 75%;
+}
+#main-side-content {
+  flex-basis: 25%;
+}
 
 
 /** footer section css **/
+
 section#footer {
   margin: 1em 0 0 0;
   padding: 1em;
@@ -96,7 +114,7 @@ h2#footer-text {
 /** form div css **/
 div#form-wrapper {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 div#form {
@@ -122,6 +140,7 @@ grid-area: message-textarea;
 }
 
 /** contact info div css **/
+
 #contact-info {
   margin: 1em;
   display: grid;
