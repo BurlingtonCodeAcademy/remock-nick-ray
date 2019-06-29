@@ -42,7 +42,7 @@ h4 {
 
 section#header {
   text-align: center;
-  margin: 0 5%;
+  margin: 0 10%;
 }
 
 
@@ -50,7 +50,7 @@ section#header {
 
 section#features {
   text-align: center;
-  margin: 0 5%;
+  margin: 0 10%;
 }
 
 div#images {
@@ -75,25 +75,35 @@ section#quote-space {
   justify-content: center;
   align-items: center;
   background-color: gray;
+  background-image: radial-gradient(rgb(125, 125, 125) 45%, rgb(104, 104, 104) 55%);
   width: 100vw;
   margin: 0;
-  height: 10em;
+  height: 30vh;
+  font-size: 2.5em;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 3px;
+  color: white;
+}
+#quote-text::before {
+  content: "&#0092;";
 }
 
 
 /** main section css **/
 
 section#main {
-  margin: 3vh 5%;
+  margin: 3vh 10%;
   background-color: aliceblue;
   display: flex;
 }
 
 #main-content {
   flex-basis: 75%;
+  margin: 25px;
 }
 #main-side-content {
   flex-basis: 25%;
+  margin: 25px;
 }
 
 
