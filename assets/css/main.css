@@ -12,12 +12,21 @@ button {
   margin: 20px auto;
   padding: 5px;
   font-size: 20px;
-  background-color: #F76B64;
+  background-color: rgb(235, 121, 109);
   color: white;
   border-radius: 3px;
   border: none;
 }
 
+buttongray {
+  margin: 20px auto;
+  padding: 5px;
+  font-size: 20px;
+  background-color: rgb(136, 136, 136);
+  color: white;
+  border-radius: 3px;
+  border: none;
+}
 
 /** header section css **/
 
@@ -105,7 +114,9 @@ section#main {
   flex-basis: 25%;
   margin: 25px;
 }
-
+#main-gap {
+  flex-basis: 5%;
+}
 
 /** footer section css **/
 
