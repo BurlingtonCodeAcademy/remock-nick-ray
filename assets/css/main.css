@@ -18,7 +18,7 @@ button {
   border: none;
 }
 
-buttongray {
+.graybutton {
   margin: 20px auto;
   padding: 5px;
   font-size: 20px;
@@ -33,7 +33,12 @@ buttongray {
 h1#title {
   margin: 3px;
   font-family: "Alfa Slab One", sans-serif;
-  color: rgb(235,	121, 109);
+  color: rgb(235, 121, 109);
+}
+
+h1#center {
+  text-align: center;
+  margin: 3px;
 }
 
 hr {
@@ -48,12 +53,10 @@ h4 {
   margin: 0px;
 }
 
-
 section#header {
   text-align: center;
   margin: 0 10%;
 }
-
 
 /** feature section css **/
 
@@ -68,14 +71,12 @@ div#images {
   justify-content: space-between;
 }
 
-
 div#images div {
   margin: 0px auto;
   width: 30%;
   height: 80%;
   background-color: red;
 }
-
 
 /** quote-space section css **/
 
@@ -84,11 +85,14 @@ section#quote-space {
   justify-content: center;
   align-items: center;
   background-color: gray;
-  background-image: radial-gradient(rgb(125, 125, 125) 45%, rgb(104, 104, 104) 55%);
+  background-image: radial-gradient(
+    rgb(125, 125, 125) 45%,
+    rgb(104, 104, 104) 55%
+  );
   width: 100vw;
   margin: 0;
   height: 30vh;
-  font-size: 2.5em;
+  font-size: 1.8em;
   font-family: Arial, Helvetica, sans-serif;
   letter-spacing: 3px;
   color: white;
@@ -96,7 +100,6 @@ section#quote-space {
 #quote-text::before {
   content: "&#0092;";
 }
-
 
 /** main section css **/
 
@@ -107,15 +110,26 @@ section#main {
 }
 
 #main-content {
-  flex-basis: 75%;
+  flex-basis: 60%;
+  margin: 25px;
+}
+#main-blog-content {
+  flex-basis: 100%;
   margin: 25px;
 }
 #main-side-content {
-  flex-basis: 25%;
+  flex-basis: 35%;
   margin: 25px;
 }
 #main-gap {
   flex-basis: 5%;
+}
+
+.side-img {
+  float: left;
+  width: 150px;
+  height: 150px;
+  margin-right: 5px;
 }
 
 /** footer section css **/
@@ -124,7 +138,7 @@ section#footer {
   margin: 1em 0 0 0;
   padding: 1em;
   border-top: 1px solid #b3b3b3;
-  background-color: #EFEFEF;
+  background-color: #efefef;
 }
 
 h2#footer-text {
@@ -144,8 +158,8 @@ div#form {
   grid-template-rows: 1fr 4fr;
   grid-gap: 0.5em;
   grid-template-areas:
-            "  name-input         email-input"
-            "message-textarea message-textarea";
+    "  name-input         email-input"
+    "message-textarea message-textarea";
   margin: 1em;
   width: 42.5vw;
 }
@@ -157,7 +171,7 @@ div#form {
   grid-area: email-input;
 }
 #message-textarea {
-grid-area: message-textarea;
+  grid-area: message-textarea;
 }
 
 /** contact info div css **/
@@ -168,12 +182,12 @@ grid-area: message-textarea;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(6, 1fr);
   grid-template-areas:
-            "contact-text   contact-text"
-            "contact-text   contact-text"
-            "   address     twitter-link"
-            "   address     instagram-link"
-            "phone-number   dribbble-link"
-            " email-link    facebook-link";
+    "contact-text   contact-text"
+    "contact-text   contact-text"
+    "   address     twitter-link"
+    "   address     instagram-link"
+    "phone-number   dribbble-link"
+    " email-link    facebook-link";
   width: 42.5vw;
 }
 #contact-info li {
@@ -187,7 +201,7 @@ grid-area: message-textarea;
   grid-area: address;
 }
 #address:before {
-  content: '';
+  content: "";
   display: inline-block;
   height: 2em;
   width: 2em;
@@ -199,7 +213,7 @@ grid-area: message-textarea;
   grid-area: phone-number;
 }
 #phone-number::before {
-  content: '';
+  content: "";
   display: inline-block;
   height: 2em;
   width: 2em;
@@ -211,7 +225,7 @@ grid-area: message-textarea;
   grid-area: email-link;
 }
 #email-link::before {
-  content: '';
+  content: "";
   display: inline-block;
   height: 2em;
   width: 2em;
@@ -223,7 +237,7 @@ grid-area: message-textarea;
   grid-area: twitter-link;
 }
 #twitter-link::before {
-  content: '';
+  content: "";
   display: inline-block;
   height: 2em;
   width: 2em;
@@ -235,7 +249,7 @@ grid-area: message-textarea;
   grid-area: instagram-link;
 }
 #instagram-link::before {
-  content: '';
+  content: "";
   display: inline-block;
   height: 2em;
   width: 2em;
@@ -247,7 +261,7 @@ grid-area: message-textarea;
   grid-area: dribbble-link;
 }
 #dribbble-link::before {
-  content: '';
+  content: "";
   display: inline-block;
   height: 2em;
   width: 2em;
@@ -259,7 +273,7 @@ grid-area: message-textarea;
   grid-area: facebook-link;
 }
 #facebook-link::before {
-  content: '';
+  content: "";
   display: inline-block;
   height: 2em;
   width: 2em;
