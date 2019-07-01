@@ -7,66 +7,114 @@ body {
   /* margin-left: 5%;
   margin-right: 5%; */
 }
+p {
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 2em;
+}
 
 button {
   margin: 20px auto;
-  padding: 5px;
+  padding: 10px 20px;
   font-size: 20px;
   background-color: rgb(235, 121, 109);
   color: white;
   border-radius: 3px;
   border: none;
 }
+button:hover {
+  background-color: #FF7B77;
+}
 
 .graybutton {
   margin: 20px auto;
-  padding: 5px;
+  padding: 5px 10px;
   font-size: 20px;
   background-color: rgb(136, 136, 136);
   color: white;
   border-radius: 3px;
   border: none;
 }
+.graybutton:hover {
+  background-color: rgb(136, 136, 136);
+  pointer-events: none;
+}
+
+button span::before {
+  content: "";
+  display: inline-block;
+  height: 0.75em;
+  width: 0.75em;
+  margin: 0px 5px;
+  background-size: contain;
+  background-image: url("/remock-nick-ray/assets/images/blank-file.svg");
+}
 
 /** header section css **/
 
 h1#title {
-  margin: 3px;
+  margin: 10vh auto 5px auto;
   font-family: "Alfa Slab One", sans-serif;
+  font-weight: normal;
   color: rgb(235, 121, 109);
+  font-size: 3em;
+  letter-spacing: 10px;
+  text-shadow: #E4E4E4 4px 4px;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
 }
 
 h1#center {
   text-align: center;
-  margin: 3px;
+  color: #878787;
+  margin: 2em;
+  font-size: 2em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 hr {
-  border: none;
-  border-top: 3px double rgb(128, 128, 128);
-  overflow: visible;
-  text-align: center;
-  height: 5px;
+  margin: 0.25em 0px;
+  border-top: 2px solid #E4E4E4;
 }
 
 h4 {
-  margin: 0px;
+  margin: 5px 0px 5em 0px;
+  color: #8B868B;
 }
 
 section#header {
   text-align: center;
-  margin: 0 10%;
+  margin: 0 5%;
 }
+
+section#header hr {
+  margin: 0.5em 0px;
+}
+
 
 /** feature section css **/
 
 section#features {
   text-align: center;
-  margin: 0 10%;
+  margin: 0 5%;
+}
+
+section#features h3 {
+  color: #878787;
+  margin: 2em;
+  font-size: 2em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+section#features h3 span {
+  color: #555555;
 }
 
 div#images {
-  background-color: #eee;
   display: flex;
   justify-content: space-between;
 }
@@ -75,7 +123,22 @@ div#images div {
   margin: 0px auto;
   width: 30%;
   height: 80%;
-  background-color: red;
+}
+section#features p {
+  margin-top: 2em;
+  color: #878787;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+section#features img {
+  border: 5px solid #EAEAEA;
+}
+
+section#features button {
+  margin-top: 2em;
+  margin-bottom: 3em;
+  box-shadow: 5px 5px EAEAEA;
 }
 
 /** quote-space section css **/
@@ -89,7 +152,6 @@ section#quote-space {
     rgb(125, 125, 125) 45%,
     rgb(104, 104, 104) 55%
   );
-  width: 100vw;
   margin: 0;
   height: 30vh;
   font-size: 1.8em;
@@ -104,9 +166,9 @@ section#quote-space {
 /** main section css **/
 
 section#main {
-  margin: 3vh 10%;
-  background-color: aliceblue;
+  margin: 3vh 5%;
   display: flex;
+  color: #878787;
 }
 
 #main-content {
@@ -121,16 +183,31 @@ section#main {
   flex-basis: 35%;
   margin: 25px;
 }
-#main-gap {
-  flex-basis: 5%;
+#main h1 {
+  margin-top: 2em;
+  margin-bottom: 1em;
 }
-
+#main h1 span {
+  color: #555555;
+}
+#main h3 {
+  margin: 2em 0 1em 0;
+}
 .side-img {
   float: left;
-  width: 150px;
-  height: 150px;
-  margin-right: 5px;
+  margin-right: 50px;
 }
+#main img {
+  border: 5px solid #EAEAEA;
+}
+div#main-side-content h3:hover {
+  color: #E48698;
+  cursor: pointer;
+}
+div#main-side-content a:visited {
+  color: #878787;
+}
+
 
 /** footer section css **/
 
@@ -144,6 +221,11 @@ section#footer {
 h2#footer-text {
   text-align: center;
   margin: 5vh auto 3vh auto;
+  font-size: 2em;
+  letter-spacing: 5px;
+}
+h2#footer-text span {
+  font-weight: 1000;
 }
 
 /** form div css **/
@@ -203,8 +285,8 @@ div#form {
 #address:before {
   content: "";
   display: inline-block;
-  height: 2em;
-  width: 2em;
+  height: 1em;
+  width: 1em;
   margin: 5px;
   background-size: contain;
   background-image: url(../images/home.svg);
@@ -215,8 +297,8 @@ div#form {
 #phone-number::before {
   content: "";
   display: inline-block;
-  height: 2em;
-  width: 2em;
+  height: 1em;
+  width: 1em;
   margin: 5px;
   background-size: contain;
   background-image: url(../images/phone.svg);
@@ -227,8 +309,8 @@ div#form {
 #email-link::before {
   content: "";
   display: inline-block;
-  height: 2em;
-  width: 2em;
+  height: 1em;
+  width: 1em;
   margin: 5px;
   background-size: contain;
   background-image: url(../images/globe.svg);
@@ -239,8 +321,8 @@ div#form {
 #twitter-link::before {
   content: "";
   display: inline-block;
-  height: 2em;
-  width: 2em;
+  height: 1em;
+  width: 1em;
   margin: 5px;
   background-size: contain;
   background-image: url(../images/twitter-logo-button.svg);
@@ -251,8 +333,8 @@ div#form {
 #instagram-link::before {
   content: "";
   display: inline-block;
-  height: 2em;
-  width: 2em;
+  height: 1em;
+  width: 1em;
   margin: 5px;
   background-size: contain;
   background-image: url(../images/instagram-logo.svg);
@@ -263,8 +345,8 @@ div#form {
 #dribbble-link::before {
   content: "";
   display: inline-block;
-  height: 2em;
-  width: 2em;
+  height: 1em;
+  width: 1em;
   margin: 5px;
   background-size: contain;
   background-image: url(../images/basketball.svg);
@@ -275,9 +357,11 @@ div#form {
 #facebook-link::before {
   content: "";
   display: inline-block;
-  height: 2em;
-  width: 2em;
+  height: 1em;
+  width: 1em;
   margin: 5px;
   background-size: contain;
   background-image: url(../images/facebook-logo-button.svg);
 }
+
+/** post-only page css **/
