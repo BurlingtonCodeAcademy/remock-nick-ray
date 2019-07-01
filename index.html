@@ -54,7 +54,7 @@
       </a>
     </section>
 
-    <section id="quote-space">USE THIS SPACE FOR A GREAT QUOTE</section>
+    <section id="quote-space"><span id="quote-text">USE THIS SPACE FOR A <span>GREAT QUOTE</span></span></section>
 
     <!-- main section -->
     <section id="main">
@@ -224,20 +224,10 @@
       <div id="form-wrapper">
         <div id="form">
           <input type="text" name="name" id="name-input" placeholder="Name" />
-          <input
-            type="text"
-            name="email"
-            id="email-input"
-            placeholder="Email"
-          />
-          <textarea
-            name="message"
-            id="message-textarea"
-            cols="30"
-            rows="10"
-            placeholder="Message"
-          ></textarea>
-          <button type="button" name="send-message">Send Message</button>
+          <input type="text" name="email"id="email-input" placeholder="Email" />
+          <textarea name="message" id="message-textarea" cols="30" rows="10" placeholder="Message"></textarea>
+          <button id="send-button" type="button" name="send-message">Send Message</button>
+          <div id="empty-space"></div>
         </div>
 
         <div id="contact-info">

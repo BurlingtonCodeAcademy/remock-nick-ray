@@ -78,6 +78,7 @@ h1#center {
 
 hr {
   margin: 0.25em 0px;
+  border: none;
   border-top: 2px solid #E4E4E4;
 }
 
@@ -158,9 +159,21 @@ section#quote-space {
   font-family: Arial, Helvetica, sans-serif;
   letter-spacing: 3px;
   color: white;
+  line-height: 15px;
 }
 #quote-text::before {
-  content: "&#0092;";
+  content: "{";
+  font-size: 3em;
+  font-weight: bold;
+  margin-right: 2em;
+  color: rgba(255, 255, 255, 0.25);
+}
+#quote-text::after {
+  content: "}";
+  font-size: 3em;
+  font-weight: bold;
+  margin-left: 2em;
+  color: rgba(255, 255, 255, 0.25);
 }
 
 /** main section css **/
@@ -200,6 +213,9 @@ section#main {
 #main img {
   border: 5px solid #EAEAEA;
 }
+div#main-side-content a {
+  color: #878787;
+}
 div#main-side-content h3:hover {
   color: #E48698;
   cursor: pointer;
@@ -237,23 +253,69 @@ div#form-wrapper {
 div#form {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: 1fr 3fr 1fr;
   grid-gap: 0.5em;
   grid-template-areas:
     "  name-input         email-input"
-    "message-textarea message-textarea";
+    "message-textarea message-textarea"
+    "send-button empty-space";
   margin: 1em;
   width: 42.5vw;
 }
-
+div#form *:focus {
+  outline: none !important;
+  border: 3px solid skyblue;
+  box-shadow: 0 0 5px skyblue;
+  margin: 0;
+}
 #name-input {
   grid-area: name-input;
+  font-size: 1.1em;
+  padding-left: 10px;
+}
+#name-input::-webkit-input-placeholder {
+  font-size: 1.1em;
+  padding-left: 10px;
+}
+#name-input::-moz-placeholder {
+  font-size: 1.1em;
+  padding-left: 10px;
 }
 #email-input {
   grid-area: email-input;
+  font-size: 1.1em;
+  padding-left: 10px;
+}
+#email-input::-webkit-input-placeholder {
+  font-size: 1.1em;
+  padding-left: 10px;
+}
+#email-input::-moz-placeholder {
+  font-size: 1.1em;
+  padding-left: 10px;
 }
 #message-textarea {
   grid-area: message-textarea;
+  font-size: 1.2em;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+#message-textarea::-webkit-input-placeholder {
+  font-size: 1.2em;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+#message-textarea::-moz-placeholder {
+  font-size: 1.2em;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+#send-button {
+  grid-area: send-button;
+  margin: 0;
+}
+#empty-space {
+  grid-area: empty-space;
 }
 
 /** contact info div css **/
@@ -262,7 +324,7 @@ div#form {
   margin: 1em;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-rows: repeat(7, 1fr);
   grid-template-areas:
     "contact-text   contact-text"
     "contact-text   contact-text"
