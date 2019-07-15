@@ -344,7 +344,7 @@ div#form *:focus {
 #address {
   grid-area: address;
 }
-#address:before {
+#address::before {
   content: "";
   display: inline-block;
   height: 1em;
